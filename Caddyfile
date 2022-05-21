@@ -13,3 +13,7 @@ reverse_proxy localhost:111222
 musicsheet.danielturcich.com {
 reverse_proxy localhost:3030
 }
+
+api.musicchartmaker.com {
+reverse_proxy localhost:3030
+}
