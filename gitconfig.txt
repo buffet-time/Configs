@@ -1,0 +1,35 @@
+$ git config --list
+
+Important ones: 
+push.default=current
+core.editor="C:\Users\radd8\AppData\Local\Programs\Microsoft VS Code\bin\code" --wait
+user.email=github@danielTurcich.com
+user.name=Daniel Turcich
+core.autocrlf=false 
+core.eol=lf
+pull.rebase=false
+
+Other:
+
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+credential.helper=manager-core
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+safe.directory=E:/Programming/DanielTurcich.com
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+core.hookspath=.husky
+remote.origin.url=https://github.com/buffet-time/DanielTurcich.com.git
