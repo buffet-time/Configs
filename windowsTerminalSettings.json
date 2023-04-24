@@ -1,7 +1,16 @@
 {
+    "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
     "actions": 
     [
+        {
+            "command": "paste",
+            "keys": "ctrl+v"
+        },
+        {
+            "command": "find",
+            "keys": "ctrl+shift+f"
+        },
         {
             "command": 
             {
@@ -9,14 +18,6 @@
                 "singleLine": false
             },
             "keys": "ctrl+c"
-        },
-        {
-            "command": "find",
-            "keys": "ctrl+shift+f"
-        },
-        {
-            "command": "paste",
-            "keys": "ctrl+v"
         },
         {
             "command": 
@@ -36,11 +37,13 @@
     "language": "en-US",
     "profiles": 
     {
-        "defaults": {},
+        "defaults": 
+        {
+            "useAtlasEngine": true
+        },
         "list": 
         [
             {
-                "commandline": "cmd.exe",
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "hidden": false,
                 "name": "Command Prompt",
@@ -48,13 +51,35 @@
             },
             {
                 "commandline": "%PROGRAMFILES%/git/usr/bin/bash.exe -i -l",
+                "elevate": false,
                 "guid": "{00000000-0000-0000-ba54-000000000002}",
                 "icon": "%PROGRAMFILES%/Git/mingw64/share/git/git-for-windows.ico",
                 "name": "Bash",
-                "startingDirectory": null
+                "startingDirectory": null,
+                "tabTitle": "Bash"
             },
             {
-                "commandline": "powershell.exe",
+                "commandline": "%PROGRAMFILES%/git/usr/bin/bash.exe -i -l",
+                "elevate": true,
+                "guid": "{00000000-0000-0000-ba54-000000000003}",
+                "icon": "%PROGRAMFILES%/Git/mingw64/share/git/git-for-windows.ico",
+                "name": "Bash Admin",
+                "startingDirectory": null,
+                "tabTitle": "Bash"
+            },
+			{
+				"guid": "{141d171c-4fd9-426d-9008-8cbc4b0b05d3}",
+				"name": "OVH Server",
+				"icon" : "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png",
+				"commandline": "plink.exe -load \"OVH-New\""
+			},
+			{
+				"guid": "{141d171c-4fd9-426d-9008-8cbc4b0b05d2}",
+				"name": "OrangePi 5",
+				"icon" : "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png",
+				"commandline": "plink.exe -load \"orangepi\""
+			},
+            {
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
                 "name": "Windows PowerShell",
@@ -71,7 +96,7 @@
                 "hidden": false,
                 "name": "Ubuntu-22.04",
                 "source": "Windows.Terminal.Wsl",
-				"startingDirectory": null
+                "startingDirectory": null
             },
             {
                 "colorScheme": "Campbell",
@@ -83,8 +108,21 @@
             },
             {
                 "guid": "{16208362-94fc-5b1f-a491-5b2624d5ab56}",
+                "hidden": true,
                 "name": "Visual Studio Debug Console",
                 "source": "VSDebugConsole"
+            },
+            {
+                "guid": "{0a93af7c-1d26-52f4-b94e-6db962779653}",
+                "hidden": false,
+                "name": "Developer Command Prompt for VS 2022 (2)",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{254812c7-833a-5473-a759-0f3f25b44af8}",
+                "hidden": false,
+                "name": "Developer PowerShell for VS 2022 (2)",
+                "source": "Windows.Terminal.VisualStudio"
             }
         ]
     },
@@ -325,5 +363,6 @@
     "showTerminalTitleInTitlebar": true,
     "startOnUserLogin": false,
     "theme": "dark",
+    "themes": [],
     "windowingBehavior": "useAnyExisting"
 }
